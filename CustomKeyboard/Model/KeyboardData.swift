@@ -10,5 +10,6 @@ import Foundation
 import RealmSwift
 
 class KeyboardData: Object {
+    @objc dynamic var id: String = ""
     @objc dynamic var selectedName: String = ""
 }

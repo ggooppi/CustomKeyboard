@@ -8,10 +8,18 @@
 
 import UIKit
 
+protocol NameCellDelegate: class {
+    func toggleButton(buttonState: Bool, cellData: NameCellData)
+}
+
 class NameTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addSwitch: UISwitch!
+    
+    weak var nameCelldelegate: NameCellDelegate?
+    private var nameDetail: NameCellData?
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +30,19 @@ class NameTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setup(data: NameCellData) {
+        nameDetail = data
+        nameLabel.text = data.name
+        addSwitch.isOn = data.isPersisted
+        
+    }
+    
+    @IBAction func toggleSwitch(_ sender: UISwitch) {
+        guard let delegate = nameCelldelegate else { return }
+        guard let selectedRowData = nameDetail else { return }
+        delegate.toggleButton(buttonState: sender.isOn, cellData: selectedRowData)
     }
     
 }

@@ -19,6 +19,7 @@
 		CC78AFF0241B8CFE00FFEE4B /* DataSourceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC78AFEF241B8CFE00FFEE4B /* DataSourceClient.swift */; };
 		CC78AFF4241B8FBA00FFEE4B /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC78AFF2241B8FBA00FFEE4B /* NameTableViewCell.swift */; };
 		CC78AFF5241B8FBA00FFEE4B /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC78AFF3241B8FBA00FFEE4B /* NameTableViewCell.xib */; };
+		CC78AFF8241BA6B100FFEE4B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC78AFF7241BA6B100FFEE4B /* Utilities.swift */; };
 		FDE2ABF9F958BD17C1366959 /* Pods_CustomKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A784C2DCA8E0B07646062107 /* Pods_CustomKeyboard.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		CC78AFEF241B8CFE00FFEE4B /* DataSourceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceClient.swift; sourceTree = "<group>"; };
 		CC78AFF2241B8FBA00FFEE4B /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
 		CC78AFF3241B8FBA00FFEE4B /* NameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
+		CC78AFF7241BA6B100FFEE4B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		E0E7F80FB72B12F7BD2E18B7 /* Pods-CustomKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomKeyboard.release.xcconfig"; path = "Target Support Files/Pods-CustomKeyboard/Pods-CustomKeyboard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +94,7 @@
 		CC78AFCE241B6CB800FFEE4B /* CustomKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				CC78AFF6241BA69F00FFEE4B /* Utilities */,
 				CC78AFE5241B6CEB00FFEE4B /* App Delegate */,
 				CC78AFE4241B6CD900FFEE4B /* Storyboard */,
 				CC78AFE3241B6CC500FFEE4B /* View Controller */,
@@ -163,6 +166,14 @@
 				CC78AFF3241B8FBA00FFEE4B /* NameTableViewCell.xib */,
 			);
 			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		CC78AFF6241BA69F00FFEE4B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CC78AFF7241BA6B100FFEE4B /* Utilities.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +298,7 @@
 				CC78AFE8241B70B000FFEE4B /* SourceViewModel.swift in Sources */,
 				CC78AFD0241B6CB800FFEE4B /* AppDelegate.swift in Sources */,
 				CC78AFEB241B73D300FFEE4B /* DataSource.swift in Sources */,
+				CC78AFF8241BA6B100FFEE4B /* Utilities.swift in Sources */,
 				CC78AFF4241B8FBA00FFEE4B /* NameTableViewCell.swift in Sources */,
 				CC78AFD2241B6CB800FFEE4B /* SceneDelegate.swift in Sources */,
 			);

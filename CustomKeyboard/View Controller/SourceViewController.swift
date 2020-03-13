@@ -36,7 +36,8 @@ extension SourceViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "nameCell", for: indexPath) as! NameTableViewCell
-        cell.nameLabel.text = viewModel.getNames()[indexPath.row]
+        cell.nameCelldelegate = self
+        cell.setup(data: viewModel.getCellDataFor(index: indexPath.row))
         return cell
     }
     
@@ -47,3 +48,9 @@ extension SourceViewController: UITableViewDataSource, UITableViewDelegate{
     
 }
 
+//MARK: - NameTableViewCell Delegate
+extension SourceViewController: NameCellDelegate{
+    func toggleButton(buttonState: Bool, cellData: NameCellData) {
+        viewModel.toggleDataPersistent(for: cellData, state: buttonState)
+    }
+}
