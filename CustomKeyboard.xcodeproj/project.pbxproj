@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,9 +15,16 @@
 		CC78AFDC241B6CB900FFEE4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC78AFDA241B6CB900FFEE4B /* LaunchScreen.storyboard */; };
 		CC78AFE8241B70B000FFEE4B /* SourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC78AFE7241B70B000FFEE4B /* SourceViewModel.swift */; };
 		CC78AFEB241B73D300FFEE4B /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC78AFEA241B73D300FFEE4B /* DataSource.swift */; };
+		CC78AFEE241B87D000FFEE4B /* KeyboardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC78AFED241B87D000FFEE4B /* KeyboardData.swift */; };
+		CC78AFF0241B8CFE00FFEE4B /* DataSourceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC78AFEF241B8CFE00FFEE4B /* DataSourceClient.swift */; };
+		CC78AFF4241B8FBA00FFEE4B /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC78AFF2241B8FBA00FFEE4B /* NameTableViewCell.swift */; };
+		CC78AFF5241B8FBA00FFEE4B /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC78AFF3241B8FBA00FFEE4B /* NameTableViewCell.xib */; };
+		FDE2ABF9F958BD17C1366959 /* Pods_CustomKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A784C2DCA8E0B07646062107 /* Pods_CustomKeyboard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F1E6B1A17019D36C30B40D7 /* Pods-CustomKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomKeyboard.debug.xcconfig"; path = "Target Support Files/Pods-CustomKeyboard/Pods-CustomKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
+		A784C2DCA8E0B07646062107 /* Pods_CustomKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC78AFCC241B6CB800FFEE4B /* CustomKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC78AFCF241B6CB800FFEE4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC78AFD1241B6CB800FFEE4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +35,11 @@
 		CC78AFDD241B6CB900FFEE4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC78AFE7241B70B000FFEE4B /* SourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewModel.swift; sourceTree = "<group>"; };
 		CC78AFEA241B73D300FFEE4B /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		CC78AFED241B87D000FFEE4B /* KeyboardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardData.swift; sourceTree = "<group>"; };
+		CC78AFEF241B8CFE00FFEE4B /* DataSourceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceClient.swift; sourceTree = "<group>"; };
+		CC78AFF2241B8FBA00FFEE4B /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		CC78AFF3241B8FBA00FFEE4B /* NameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
+		E0E7F80FB72B12F7BD2E18B7 /* Pods-CustomKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomKeyboard.release.xcconfig"; path = "Target Support Files/Pods-CustomKeyboard/Pods-CustomKeyboard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDE2ABF9F958BD17C1366959 /* Pods_CustomKeyboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52F0994E8F12888D8648506F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F1E6B1A17019D36C30B40D7 /* Pods-CustomKeyboard.debug.xcconfig */,
+				E0E7F80FB72B12F7BD2E18B7 /* Pods-CustomKeyboard.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C4E608F57A9464F877B2B8EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A784C2DCA8E0B07646062107 /* Pods_CustomKeyboard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CC78AFC3241B6CB800FFEE4B = {
 			isa = PBXGroup;
 			children = (
 				CC78AFCE241B6CB800FFEE4B /* CustomKeyboard */,
 				CC78AFCD241B6CB800FFEE4B /* Products */,
+				52F0994E8F12888D8648506F /* Pods */,
+				C4E608F57A9464F877B2B8EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +95,10 @@
 				CC78AFE5241B6CEB00FFEE4B /* App Delegate */,
 				CC78AFE4241B6CD900FFEE4B /* Storyboard */,
 				CC78AFE3241B6CC500FFEE4B /* View Controller */,
+				CC78AFF1241B8F8D00FFEE4B /* Custom View */,
 				CC78AFE6241B708900FFEE4B /* View Model */,
-				CC78AFE9241B721C00FFEE4B /* Data */,
+				CC78AFEC241B87C200FFEE4B /* Model */,
+				CC78AFE9241B721C00FFEE4B /* Data Repository */,
 				CC78AFD8241B6CB900FFEE4B /* Assets.xcassets */,
 				CC78AFDD241B6CB900FFEE4B /* Info.plist */,
 			);
@@ -105,12 +139,30 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
-		CC78AFE9241B721C00FFEE4B /* Data */ = {
+		CC78AFE9241B721C00FFEE4B /* Data Repository */ = {
 			isa = PBXGroup;
 			children = (
 				CC78AFEA241B73D300FFEE4B /* DataSource.swift */,
+				CC78AFEF241B8CFE00FFEE4B /* DataSourceClient.swift */,
 			);
-			path = Data;
+			path = "Data Repository";
+			sourceTree = "<group>";
+		};
+		CC78AFEC241B87C200FFEE4B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC78AFED241B87D000FFEE4B /* KeyboardData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC78AFF1241B8F8D00FFEE4B /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				CC78AFF2241B8FBA00FFEE4B /* NameTableViewCell.swift */,
+				CC78AFF3241B8FBA00FFEE4B /* NameTableViewCell.xib */,
+			);
+			path = "Custom View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC78AFE0241B6CB900FFEE4B /* Build configuration list for PBXNativeTarget "CustomKeyboard" */;
 			buildPhases = (
+				AE213573146FFB6CACD49A56 /* [CP] Check Pods Manifest.lock */,
 				CC78AFC8241B6CB800FFEE4B /* Sources */,
 				CC78AFC9241B6CB800FFEE4B /* Frameworks */,
 				CC78AFCA241B6CB800FFEE4B /* Resources */,
+				F4DEFF57828AC7426B2F0C42 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,11 +227,54 @@
 			files = (
 				CC78AFDC241B6CB900FFEE4B /* LaunchScreen.storyboard in Resources */,
 				CC78AFD9241B6CB900FFEE4B /* Assets.xcassets in Resources */,
+				CC78AFF5241B8FBA00FFEE4B /* NameTableViewCell.xib in Resources */,
 				CC78AFD7241B6CB800FFEE4B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AE213573146FFB6CACD49A56 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomKeyboard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4DEFF57828AC7426B2F0C42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomKeyboard/Pods-CustomKeyboard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomKeyboard/Pods-CustomKeyboard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CustomKeyboard/Pods-CustomKeyboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CC78AFC8241B6CB800FFEE4B /* Sources */ = {
@@ -185,9 +282,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC78AFD4241B6CB800FFEE4B /* SourceViewController.swift in Sources */,
+				CC78AFEE241B87D000FFEE4B /* KeyboardData.swift in Sources */,
+				CC78AFF0241B8CFE00FFEE4B /* DataSourceClient.swift in Sources */,
 				CC78AFE8241B70B000FFEE4B /* SourceViewModel.swift in Sources */,
 				CC78AFD0241B6CB800FFEE4B /* AppDelegate.swift in Sources */,
 				CC78AFEB241B73D300FFEE4B /* DataSource.swift in Sources */,
+				CC78AFF4241B8FBA00FFEE4B /* NameTableViewCell.swift in Sources */,
 				CC78AFD2241B6CB800FFEE4B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +430,7 @@
 		};
 		CC78AFE1241B6CB900FFEE4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F1E6B1A17019D36C30B40D7 /* Pods-CustomKeyboard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -348,6 +449,7 @@
 		};
 		CC78AFE2241B6CB900FFEE4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0E7F80FB72B12F7BD2E18B7 /* Pods-CustomKeyboard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
