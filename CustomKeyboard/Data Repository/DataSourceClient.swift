@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 
 protocol DataSourceClient: class {
+    func get(type: Object.Type) -> Results<Object>
     func save(object: Object, type: Object.Type, id: String)
     func delete(type: Object.Type, id: String)
     func isStored(type: Object.Type, id: String) -> Bool
@@ -17,7 +18,19 @@ protocol DataSourceClient: class {
 
 class DataSourceClientImpl: DataSourceClient {
     
-    let realm = try! Realm()
+    //MARK: Properties
+    static var shared = DataSourceClientImpl()
+    private let realm: Realm
+    
+    private init() {
+        let fileURL = FileManager.default
+            .containerURL(forSecurityApplicationGroupIdentifier: "group.com.innoplexus.CustomKeyboard")!
+            .appendingPathComponent("default.realm")
+        let config = Realm.Configuration(fileURL: fileURL)
+        realm = try! Realm(configuration: config)
+    }
+    
+    func get(type: Object.Type) -> Results<Object> { realm.objects(type) }
     
     func save(object: Object, type: Object.Type, id: String) {
         

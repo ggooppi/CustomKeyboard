@@ -5,5 +5,10 @@ target 'CustomKeyboard' do
 
   # Pods for CustomKeyboard
   pod 'RealmSwift'
+  
+  target 'Keyboard' do
+      inherit! :search_paths
+      
+  end
 
 end

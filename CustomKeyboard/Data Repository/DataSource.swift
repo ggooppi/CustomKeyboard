@@ -24,7 +24,7 @@ class DataSourceImpl: DataSource {
     
     private let client: DataSourceClient
     
-    init(client: DataSourceClient = DataSourceClientImpl()) {
+    init(client: DataSourceClient = DataSourceClientImpl.shared) {
         self.client = client
     }
     

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="4kM-r4-yM6" customClass="KeyboardView" customModule="Keyboard" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="700" height="264"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="XlN-Dr-Jrx">
+                    <rect key="frame" x="0.0" y="0.0" width="700" height="200"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="k6j-RL-N5E"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FMD-tk-7V2">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="4kM-r4-yM6" id="owm-lK-S5H"/>
+                        <outlet property="delegate" destination="4kM-r4-yM6" id="257-p2-PyB"/>
+                    </connections>
+                </collectionView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sEK-7E-nn0">
+                    <rect key="frame" x="8" y="211" width="684" height="45"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezx-M4-pMw" customClass="KeyboardButton" customModule="Keyboard" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="45" id="YKd-PG-qo8"/>
+                                <constraint firstAttribute="height" constant="45" id="x2n-GD-0Xl"/>
+                            </constraints>
+                            <state key="normal" image="NextKeyboard"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3E-q3-RCJ" customClass="KeyboardButton" customModule="Keyboard" customModuleProvider="target">
+                            <rect key="frame" x="53" y="0.0" width="578" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="gX6-AP-kIh"/>
+                            </constraints>
+                            <state key="normal" title="Space">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJR-Uc-jpS" customClass="KeyboardButton" customModule="Keyboard" customModuleProvider="target">
+                            <rect key="frame" x="639" y="0.0" width="45" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="45" id="LG1-rN-Qd2"/>
+                                <constraint firstAttribute="height" constant="45" id="gvd-KO-VOA"/>
+                            </constraints>
+                            <state key="normal" image="Backspace"/>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="sEK-7E-nn0" firstAttribute="leading" secondItem="lxh-8I-ofb" secondAttribute="leading" constant="8" id="7P2-O7-f92"/>
+                <constraint firstItem="XlN-Dr-Jrx" firstAttribute="leading" secondItem="lxh-8I-ofb" secondAttribute="leading" id="8Yg-Gs-xpP"/>
+                <constraint firstItem="lxh-8I-ofb" firstAttribute="trailing" secondItem="sEK-7E-nn0" secondAttribute="trailing" constant="8" id="FAt-9J-gG0"/>
+                <constraint firstItem="XlN-Dr-Jrx" firstAttribute="top" secondItem="lxh-8I-ofb" secondAttribute="top" id="Go8-A3-0AD"/>
+                <constraint firstItem="lxh-8I-ofb" firstAttribute="trailing" secondItem="XlN-Dr-Jrx" secondAttribute="trailing" id="RYe-Ae-7z9"/>
+                <constraint firstItem="lxh-8I-ofb" firstAttribute="bottom" secondItem="sEK-7E-nn0" secondAttribute="bottom" constant="8" id="lMM-zg-HeR"/>
+                <constraint firstItem="sEK-7E-nn0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="XlN-Dr-Jrx" secondAttribute="bottom" constant="8" id="qkY-bG-Zua"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="lxh-8I-ofb"/>
+            <connections>
+                <outlet property="backSpaceButton" destination="bJR-Uc-jpS" id="mYW-Ny-UbE"/>
+                <outlet property="collectionView" destination="XlN-Dr-Jrx" id="hCf-Q2-A2B"/>
+                <outlet property="nextButton" destination="ezx-M4-pMw" id="jTn-aO-abG"/>
+                <outlet property="spaceButton" destination="M3E-q3-RCJ" id="cZ1-bC-d0F"/>
+            </connections>
+            <point key="canvasLocation" x="-249.375" y="141.5492957746479"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Backspace" width="24" height="18"/>
+        <image name="NextKeyboard" width="19" height="19"/>
+    </resources>
+</document>
