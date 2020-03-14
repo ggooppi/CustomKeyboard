@@ -8,12 +8,23 @@
 
 import UIKit
 
+
+protocol KeyboardViewDelegate: class {
+  func insertCharacter(_ newCharacter: String)
+  func deleteCharacterBeforeCursor()
+  func characterBeforeCursor() -> String?
+}
+
 class KeyboardView: UIView {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var spaceButton: KeyboardButton!
     @IBOutlet weak var nextButton: KeyboardButton!
     @IBOutlet weak var backSpaceButton: KeyboardButton!
+    
+    private var names = [String]()
+    
+    weak var delegate: KeyboardViewDelegate?
     
     
     /*
@@ -65,17 +76,39 @@ class KeyboardView: UIView {
         }
     }
     
+    func setup(names: [String]) {
+        self.names = names
+        collectionView.reloadData()
+    }
+    
+    @IBAction func spaceButtonOnClick(_ sender: Any) {
+        delegate?.insertCharacter(" ")
+    }
+    
+    @IBAction func deleteButtonOnCLlck(_ sender: Any) {
+        delegate?.deleteCharacterBeforeCursor()
+    }
+    
 }
 
 extension KeyboardView : UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return names.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "keyboardCollectionViewCell", for: indexPath) as! KeyboardCollectionViewCell
+        cell.nameButton.setTitle(names[indexPath.row], for: .normal)
+        cell.delegate = self
         return cell
     }
     
 }
+
+extension KeyboardView: KeyboardCollectionViewCellDelegate{
+    func insertCharacter(_ newCharacter: String) {
+        delegate?.insertCharacter(newCharacter)
+    }
+}
+

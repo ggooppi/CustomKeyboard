@@ -33,6 +33,7 @@
 		CC78B01D241CACBB00FFEE4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC78AFD8241B6CB900FFEE4B /* Assets.xcassets */; };
 		CC78B020241CAEDB00FFEE4B /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC78B01F241CAEDB00FFEE4B /* KeyboardButton.swift */; };
 		CC78B022241CB11300FFEE4B /* MorseColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC78B021241CB11300FFEE4B /* MorseColors.swift */; };
+		CC78B025241D518000FFEE4B /* KeyboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC78B024241D517F00FFEE4B /* KeyboardViewModel.swift */; };
 		FDE2ABF9F958BD17C1366959 /* Pods_CustomKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A784C2DCA8E0B07646062107 /* Pods_CustomKeyboard.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		CC78B01B241CAAAF00FFEE4B /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		CC78B01F241CAEDB00FFEE4B /* KeyboardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 		CC78B021241CB11300FFEE4B /* MorseColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MorseColors.swift; sourceTree = "<group>"; };
+		CC78B024241D517F00FFEE4B /* KeyboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewModel.swift; sourceTree = "<group>"; };
 		E0E7F80FB72B12F7BD2E18B7 /* Pods-CustomKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomKeyboard.release.xcconfig"; path = "Target Support Files/Pods-CustomKeyboard/Pods-CustomKeyboard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -246,6 +248,7 @@
 			children = (
 				CC78B00E241CA11000FFEE4B /* Keyboard.entitlements */,
 				CC78B00F241CA49800FFEE4B /* View Controller */,
+				CC78B023241D516000FFEE4B /* View Model */,
 				CC78B010241CA4D900FFEE4B /* Custom View */,
 				CC78B01E241CAECD00FFEE4B /* Helper */,
 				CC78B001241BEE8200FFEE4B /* Info.plist */,
@@ -295,6 +298,14 @@
 				CC78B01F241CAEDB00FFEE4B /* KeyboardButton.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		CC78B023241D516000FFEE4B /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC78B024241D517F00FFEE4B /* KeyboardViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,6 +501,7 @@
 				CC78B00A241C015100FFEE4B /* DataSource.swift in Sources */,
 				CC78B000241BEE8200FFEE4B /* KeyboardViewController.swift in Sources */,
 				CC78B022241CB11300FFEE4B /* MorseColors.swift in Sources */,
+				CC78B025241D518000FFEE4B /* KeyboardViewModel.swift in Sources */,
 				CC78B01C241CAAAF00FFEE4B /* KeyboardView.swift in Sources */,
 				CC78B00B241C015E00FFEE4B /* KeyboardData.swift in Sources */,
 				CC78B00C241C017100FFEE4B /* DataSourceClient.swift in Sources */,

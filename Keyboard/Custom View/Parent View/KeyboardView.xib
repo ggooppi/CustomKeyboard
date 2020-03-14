@@ -13,17 +13,17 @@
             <rect key="frame" x="0.0" y="0.0" width="700" height="264"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="XlN-Dr-Jrx">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="XlN-Dr-Jrx">
                     <rect key="frame" x="0.0" y="0.0" width="700" height="200"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="k6j-RL-N5E"/>
                     </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FMD-tk-7V2">
-                        <size key="itemSize" width="50" height="50"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="4" id="FMD-tk-7V2">
+                        <size key="itemSize" width="100" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="sectionInset" minX="5" minY="8" maxX="5" maxY="0.0"/>
                     </collectionViewFlowLayout>
                     <connections>
                         <outlet property="dataSource" destination="4kM-r4-yM6" id="owm-lK-S5H"/>
@@ -49,6 +49,9 @@
                             <state key="normal" title="Space">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                             </state>
+                            <connections>
+                                <action selector="spaceButtonOnClick:" destination="4kM-r4-yM6" eventType="touchUpInside" id="TUg-cb-i4T"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJR-Uc-jpS" customClass="KeyboardButton" customModule="Keyboard" customModuleProvider="target">
                             <rect key="frame" x="639" y="0.0" width="45" height="45"/>
@@ -57,6 +60,9 @@
                                 <constraint firstAttribute="height" constant="45" id="gvd-KO-VOA"/>
                             </constraints>
                             <state key="normal" image="Backspace"/>
+                            <connections>
+                                <action selector="deleteButtonOnCLlck:" destination="4kM-r4-yM6" eventType="touchUpInside" id="iN9-GK-ks8"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

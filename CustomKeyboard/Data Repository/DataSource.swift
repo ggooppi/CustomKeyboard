@@ -11,6 +11,7 @@ import Foundation
 //MARK:- DataSource Protocol
 protocol DataSource: class {
     func getData() -> [String]
+    func getStoredData() -> [String]
     func saveToDatabase(name: KeyboardData)
     func deleteFromDatabase(name: KeyboardData)
     func isStored(name: KeyboardData) -> Bool
@@ -30,6 +31,17 @@ class DataSourceImpl: DataSource {
     
     //MARK: Protocol Methods
     func getData() -> [String] { staticNames }
+    
+    func getStoredData() -> [String] {
+        var convertedString = [String]()
+        let keyboardData = client.get(type: KeyboardData.self)
+        keyboardData.forEach { (object) in
+            if let data = object as? KeyboardData{
+                convertedString.append(data.selectedName)
+            }
+        }
+        return convertedString
+    }
     
     func saveToDatabase(name: KeyboardData) { client.save(object: name, type: KeyboardData.self, id: name.id) }
     

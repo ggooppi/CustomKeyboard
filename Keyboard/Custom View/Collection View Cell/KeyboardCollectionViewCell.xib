@@ -24,6 +24,9 @@
                         <state key="normal" title="Button">
                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                         </state>
+                        <connections>
+                            <action selector="buttonOnClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="jhg-bb-HiW"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>

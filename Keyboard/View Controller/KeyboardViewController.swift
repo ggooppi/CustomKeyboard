@@ -10,7 +10,8 @@ import UIKit
 
 class KeyboardViewController: UIInputViewController {
     
-    let dataClient: DataSourceClient = DataSourceClientImpl.shared
+    //MARK: - Properties
+    let viewModel: KeyboardViewModel = KeyboardViewModelImpl()
     
     var keyboardView: KeyboardView!
     
@@ -27,6 +28,8 @@ class KeyboardViewController: UIInputViewController {
         let nib = UINib(nibName: "KeyboardView", bundle: nil)
         let objects = nib.instantiate(withOwner: nil, options: nil)
         keyboardView = (objects.first as! KeyboardView)
+        keyboardView.setup(names: viewModel.getNames())
+        keyboardView.delegate = self
         
         guard let inputView = inputView else { return }
         inputView.addSubview(keyboardView)
@@ -41,6 +44,7 @@ class KeyboardViewController: UIInputViewController {
         
         keyboardView.setNextKeyboardVisible(needsInputModeSwitchKey)
         keyboardView.nextButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
+    
     }
     
     override func textDidChange(_ textInput: UITextInput?) {
@@ -55,4 +59,22 @@ class KeyboardViewController: UIInputViewController {
       keyboardView.setColorScheme(colorScheme)
     }
 
+}
+
+extension KeyboardViewController: KeyboardViewDelegate{
+    
+    func insertCharacter(_ newCharacter: String) {
+        textDocumentProxy.insertText(newCharacter)
+    }
+    
+    func deleteCharacterBeforeCursor() {
+        textDocumentProxy.deleteBackward()
+    }
+    
+    func characterBeforeCursor() -> String? {
+        guard let character = textDocumentProxy.documentContextBeforeInput?.last else {
+          return nil
+        }
+        return String(character)
+    }
 }
