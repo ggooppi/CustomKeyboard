@@ -57,7 +57,7 @@ class KeyboardView: UIView {
     }
     
     func setColorScheme(_ colorScheme: MorseColorScheme) {
-        let colorScheme = MorseColors(colorScheme: colorScheme)
+        let colorScheme = Colors(colorScheme: colorScheme)
         backgroundColor = colorScheme.backgroundColor
         
         for view in subviews {
